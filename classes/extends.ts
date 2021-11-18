@@ -49,10 +49,10 @@
     }
 
 
-    const wolverine = new Xmen('Wolverine', 'Logan', true)
+    // const wolverine = new Xmen('Wolverine', 'Logan', true)
 
-    wolverine.fullName = 'Fer' //!inteligenetmente diferencia !
+    // wolverine.fullName = 'Fer' //!inteligenetmente diferencia !
 
-    console.log(wolverine.fullName) // es un getters que no se manda a llmar con ()
+    // console.log(wolverine.fullName) // es un getters que no se manda a llmar con ()
     // wolverine.getFullNameDesdeXmen()
 })()

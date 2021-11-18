@@ -1,5 +1,29 @@
 "use strict";
 (() => {
+    class Mutante {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+    }
+    class Xmen extends Mutante {
+        salvarMundo() {
+            console.log('Mundo Salvado');
+        }
+    }
+    class Villain extends Mutante {
+        dominarMundo() {
+            console.log('Mundo Conquistado');
+        }
+    }
+    let magneto;
+    const wolverine = new Xmen('Wolverine', 'Logan');
+    magneto = new Villain('Magneto', 'Magnus');
+    const printName = (character) => {
+        console.log(character.realName);
+    };
+})();
+(() => {
     class Avenger {
         constructor(name, team, realName, age) {
             this.name = name;
@@ -47,8 +71,26 @@
             this.name = name;
         }
     }
-    const wolverine = new Xmen('Wolverine', 'Logan', true);
-    wolverine.fullName = 'Fer';
-    console.log(wolverine.fullName);
+})();
+(() => {
+    class Apocalipsis {
+        constructor(name) {
+            this.name = name;
+        }
+        static callApocalipsis() {
+            if (!Apocalipsis.instance) {
+                Apocalipsis.instance = new Apocalipsis('Soy el apocalipsis unicoo');
+            }
+            return Apocalipsis.instance;
+        }
+        changeName(name) {
+            this.name = name;
+        }
+    }
+    const apocalipsis1 = Apocalipsis.callApocalipsis();
+    const apocalipsis2 = Apocalipsis.callApocalipsis();
+    const apocalipsis3 = Apocalipsis.callApocalipsis();
+    apocalipsis2.changeName('AURON');
+    console.log(apocalipsis1, apocalipsis2, apocalipsis3);
 })();
 //# sourceMappingURL=main.js.map
